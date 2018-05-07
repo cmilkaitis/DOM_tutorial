@@ -1,9 +1,8 @@
-const bookList = document.querySelector('#book-list');
+var btns = document.querySelectorAll('#book-list .delete');
 
-console.log('book-list next sibling is:', bookList.nextSibling);
-console.log('book-list next element sibling is:', bookList.nextElementSibling);
-
-console.log('book-list previous sibling is:', bookList.previousSibling);
-console.log('book-list previous element sibling is:', bookList.previousElementSibling);
-
-bookList.previousElementSibling.querySelector('p').innerHTML += '<br/>too cool for everyone else!';
+btns.forEach(btn => {
+    btn.addEventListener('click', function(e){
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li);
+    })
+})
