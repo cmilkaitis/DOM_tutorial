@@ -34,3 +34,16 @@ addForm.addEventListener('submit', function(e){
     list.appendChild(li);
 });
 
+
+var book = document.querySelector('li:first-child .name');
+
+console.log(book) // <span class="name">Name of the Wind</span>
+
+book.getAttribute('class'); // "name"
+book.getAttribute('href'); // null
+book.setAttribute('class', 'name2'); // <span class="name-2">Name of the Wind</span>
+book.hasAttribute('class'); //true
+book.hasAttribute('href'); // false
+book.removeAttribute('class'); // <span>Name of the Wind</span>
+
+
