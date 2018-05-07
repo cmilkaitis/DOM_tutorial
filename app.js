@@ -34,16 +34,15 @@ addForm.addEventListener('submit', function(e){
     list.appendChild(li);
 });
 
+// hide box
 
-var book = document.querySelector('li:first-child .name');
+const hideBox = document.querySelector('#hide');
 
-console.log(book) // <span class="name">Name of the Wind</span>
-
-book.getAttribute('class'); // "name"
-book.getAttribute('href'); // null
-book.setAttribute('class', 'name2'); // <span class="name-2">Name of the Wind</span>
-book.hasAttribute('class'); //true
-book.hasAttribute('href'); // false
-book.removeAttribute('class'); // <span>Name of the Wind</span>
-
+hideBox.addEventListener('change', function(e){
+    if(hideBox.checked == true){
+        list.style.display = "none";
+    } else {
+        list.style.display = "initial";
+    }
+})
 
